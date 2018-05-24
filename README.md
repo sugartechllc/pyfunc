@@ -1,2 +1,2 @@
 # pyfunc
-Use a sting as a python function
+Use a string as a python function
