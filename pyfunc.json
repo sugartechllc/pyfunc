@@ -1,8 +1,8 @@
 {
-    "msl": {
-        "body":"def msl(x,y): \n  return x*y*y"
+    "psl": {
+        "body":"from math import pow\ndef psl(Psta, h): \n# Psta - mb, h - m\n  P0=1013.25\n  Rd=287.05\n  Gs=0.0065\n  g=9.80665\n  T0=288.15\n  e=(Rd*Gs)/g\n  x1 = pow(P0/Psta,e)\n  x2=Gs*h/T0\n  Psl=Psta*pow((1+x1*x2),(1/e))\n  return Psl"
     },
     "dewpoint": {
-        "body":"import math\ndef dewpoint(x,y): \n  return math.log10(x)/y"
+        "body":"from math import log\ndef dewpoint(t,rh): \n# t in degC, rh in %\n  if rh > 100.0:\n    return t\n  if rh <= 0.0:\n    rh = 0.0001\n  logrh = log(rh/100.0)\n  tdiv = (17.625*t)/(243.04+t)\n  td = 243.04*(logrh + tdiv)/(17.625 - logrh - tdiv)\n  return td"
     }
 }
