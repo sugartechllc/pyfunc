@@ -1,0 +1,8 @@
+{
+    "msl": {
+        "body":"def msl(x,y): \n  return x*y*y"
+    },
+    "dewpoint": {
+        "body":"import math\ndef dewpoint(x,y): \n  return math.log10(x)/y"
+    }
+}
